@@ -1,135 +1,134 @@
-<!--<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Car Rental Homepage</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-
-  <header>
-    <h1>Car Rental</h1>
-  </header>
-
-  <main>
-    <label for="menuButton">&#9776; Menu</label>
-    <input type="checkbox" id="menuButton">
-
-    <div id="menu">
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Cars</a></li>
-        <li><a href="#">Locations</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </div>
-
-    <form action="#" method="get">
-      <label for="search">Search for Cars:</label>
-      <input type="text" id="search" name="search" placeholder="Enter location, car type, etc.">
-      <input type="submit" value="Search">
-    </form>
-
-    <!-- Car image gallery with a scroll wheel and descriptions 
-    <div class="car-gallery">
-      <div class="car" onclick="showElement('car1-description')">
-        <img src="imgs/wallpaperflare.com_wallpaper_2.jpg" alt="Car 1">
-        <div class="car-description" id="car1-description">Car 1 Description</div>
-      </div>
-      <div class="car" onclick="showElement('car2-description')">
-        <img src="imgs/wallpaperflare.com_wallpaper (4).jpg" alt="Car 2">
-        <div class="car-description" id="car2-description">Car 2 Description</div>
-      </div>
-      <div class="car" onclick="showElement('car3-description')">
-        <img src="imgs/wallpaperflare.com_wallpaper (3).jpg" alt="Car 3">
-        <div class="car-description" id="car3-description">Car 3 Description</div>
-      </div>
-      <!-- Add more cars as needed 
-    </div>
-  </main>
-
-  <script>
-    function showElement(x) {
-      var element = document.getElementById(x);
-      if (element.style.visibility === "visible") {
-        element.style.visibility = "hidden";
-      } else {
-        element.style.visibility = "visible";
-      }
-    }
-  </script>
-
-</body>
-
-</html> -->
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Car Rental Homepage</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Rental</title>
+    <style>
+        #details {
+            display: none;
+        }
+    </style>
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
 
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        .car {
+            border: 1px solid #ccc;
+            margin: 10px;
+            padding: 10px;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
 </head>
-
 <body>
 
-  <header>
-    <h1>Car Rental</h1>
-  </header>
+<header>
+    <h1>Car Rental Service</h1>
+</header>
 
-  <main>
-    <label for="menuButton">&#9776; Menu</label>
-    <input type="checkbox" id="menuButton">
+<section>
+    <div class="car" id="car1">
+        <h2>KiA RIO</h2>
+        <p>Price per day: $50</p>
+        <p><img src="Aurora Black-ABP-23,24,29-640-en_US.webp" width="200" height="135" alt="kia RIO"></p>
+        <h1>Click the button to show details</h1>
 
-    <div id="menu">
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Cars</a></li>
-        <li><a href="#">Locations</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
+<button onclick="showDetails()">Show Details</button>
+
+<div id="details">
+    <h2>Details:</h2>
+    <p>model:2023 , color:black, avalable colors white and black,status:avlable </p>
+</div>
+        <button onclick="reserveCar('KIA RIO')">Reserve</button>
     </div>
 
-    <form action="#" method="get">
-      <label for="search">Search for Cars:</label>
-      <input type="text" id="search" name="search" placeholder="Enter location, car type, etc.">
-      <input type="submit" value="Search">
-    </form>
+    <div class="car" id="car2">
+        <h2>Toyta croola</h2>
+        <p>Price per day: $60</p>
+        <p><img src="C:\Users\nabil\Downloads\htm 1\download.jfif"width="200" height="135" alt="Toyta croola"></p>
+        <button onclick="showDetails1()">Show Details</button>
 
-    <!-- Car image gallery with a scroll wheel and descriptions -->
-    <div class="car-gallery">
-      <div class="car" onclick="showElement('car1-description')">
-        <img src="imgs/wallpaperflare.com_wallpaper_2.jpg" alt="Car 1">
-        <div class="car-description" id="car1-description">Car 1 Description</div>
-      </div>
-      <div class="car" onclick="showElement('car2-description')">
-        <img src="imgs/wallpaperflare.com_wallpaper (4).jpg" alt="Car 2">
-        <div class="car-description" id="car2-description">Car 2 Description</div>
-      </div>
-      <div class="car" onclick="showElement('car3-description')">
-        <img src="imgs/wallpaperflare.com_wallpaper (3).jpg" alt="Car 3">
-        <div class="car-description" id="car3-description">Car 3 Description</div>
-      </div>
-      <!-- Add more cars as needed -->
+<div id="de">
+    <h2>Details:</h2>
+    <p>model:2023 , color:white, avalable colors white and black,status:avlable </p>
+</div>
+
+        <button onclick="reserveCar('Toyta croola')">Reserve</button>
     </div>
-  </main>
 
-  <script>
-    function showElement(x) {
-      var element = document.getElementById(x);
-      if (element.style.visibility === "visible") {
-        element.style.visibility = "hidden";
-      } else {
-        element.style.visibility = "visible";
-      }
+    <div class="car" id="car2">
+        <h2>BMW</h2>
+        <p>Price per day: $100</p>
+        <p><img src="eef22e900b5bf650bbad920562567fcax.webp"width="200" height="135" alt="BMw"></p>
+        <button onclick="showDetails()">Show Details</button>
+
+        <div id="details">
+            <h2>Details:</h2>
+            <p>model:2023 , color:blue, avalable colors white and black,status:avlable </p>
+        </div>
+        <button onclick="reserveCar('BMW')">Reserve</button>
+    </div>
+
+    <div class="car" id="car2">
+        <h2>Nissan</h2>
+        <p>Price per day: $20</p>
+        <p><img src="C:\Users\nabil\Downloads\htm 1\1.jfif"width="200" height="135" alt="Nissan"></p>
+        <button onclick="showDetails()">Show Details</button>
+
+        <div id="details">
+            <h2>Details:</h2>
+            <p>model:2023 , color:silver, avalable colors white and black,status:avlable </p>
+        </div>
+        <button onclick="reserveCar('BMW')">Reserve</button>
+    </div>
+        <button onclick="reserveCar('Nissan')">Reserve</button>
+    </div>
+
+    <div id="reservationStatus"></div>
+</section>
+
+
+
+<script>
+    function showDetails() {
+        var detailsElement = document.getElementById('details');
+        detailsElement.style.display = 'block';
     }
-  </script>
+    function showDetails1() {
+        var detailsElement1 = document.getElementById('de');
+        detailsElement1.style.display = 'block';
+    }
+    function reserveCar(model) {
+        // Placeholder for reservation logic
+        document.getElementById('reservationStatus').innerText = `Reserved ${model} successfully!`;
+    }
+</script>
 
 </body>
 
