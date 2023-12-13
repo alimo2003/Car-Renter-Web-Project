@@ -15,7 +15,7 @@ body{
     font-size: large;
 }
 #den{
-    background-color:   rgb(220, 255, 212);
+    background-color:   rgb(225, 255, 212);
     margin-top: 0%;
     border: 0vw;
     align-items: center;
@@ -86,9 +86,4 @@ button{
     width: 25%;
     height: 2vw;
     border-radius: 0.5vw;
-}
-span{
-    margin: 2vw;
-    text-align: center;
-    width: 42%;
 }

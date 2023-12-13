@@ -1,10 +1,5 @@
 
 <?php
- 
-        // servername => localhost
-        // username => root
-        // password => empty
-        // database name => staff
         $conn = mysqli_connect("localhost", "root", "2003199", "backend");
          
         // Check connection
@@ -22,7 +17,6 @@
         $phonenumber = $_REQUEST['phonenumber'];
          
         // Performing insert query execution
-        // here our table name is college
         $sql = "INSERT INTO accounts  VALUES ('$first_name', 
             '$last_name','$email','$password','$phonenumber','$date',TRUE)";
          

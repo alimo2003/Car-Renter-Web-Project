@@ -18,17 +18,20 @@
          <div id="signupdiv">
              <h2>Sign up</h2>
                 <form action="signup.php" method="post">
-                <input type="text" placeholder="First Name" id="fname" required name="fname" onkeypress="validatename()">
-                <input type="text" placeholder="Last Name" id="lname" name="lname"required><br>
-                <input type="email" placeholder="Email" id="email" name="email"><br>
-                <input type="password" name="password" id="password" placeholder="Password" name="password"required>
+                <input type="text" placeholder="First Name" id="fname" required name="fname" oninput="validatefname()">
+                <input type="text" placeholder="Last Name" id="lname" name="lname"required oninput="validatelname()"><br>
+                <span id="fnameerror"></span><br>
+                <input type="email" placeholder="Email" id="email" name="email" required oninput="validateemail()"><br>
+                <span id="emailerror"></span><br>
+                <input type="password" name="password" id="password" placeholder="Password" name="password"required oninput="validatpassword()">
                 <button id="togglebtn" onclick="togglepassword()">Show</button>
-                <input type="password" placeholder="Confirm Password" id="confirmpassword" required><br>
-                <input type="text" placeholder="Phone Number" id="phonenumber" name="phonenumber" required>
-                <input type="date" id="date" name="date" ><br>
-                <input type="checkbox" id="agreement">agree to <a href="#">terms</a><br>
-                <span id="error"></span><br>
-                <button>Register</button>
+                <input type="password" placeholder="Confirm Password" id="confirmpassword" required oninput="Confirmpassword()"><br>
+                <span id="passworderror"></span><br>
+                <input type="text" placeholder="Phone Number" id="phonenumber" name="phonenumber" required oninput="validatephone()">
+                <input type="date" id="date" name="date" required><br>
+                <span id="phoneerror"></span><br>
+                <input type="checkbox" id="agreement" required>agree to <a href="#">terms</a><br>
+                <button id="submitbtn">Register</button>
                 </form>
         </div>
     </div> 
