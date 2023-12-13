@@ -1,0 +1,157 @@
+/* body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+main {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#menuButton {
+  display: none;
+  cursor: pointer;
+}
+
+#menu {
+  display: none;
+  position: absolute;
+  top: 40px;
+  right: 10px;
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  #menuButton {
+    display: contents;
+  }
+
+  #menuButton:checked + #menu {
+    display: contents;
+  }
+}
+/* Additional styles for images and scroll wheel */
+/* .car-gallery {
+  display: flex;
+  overflow-x: auto;
+  padding: 10px 0;
+}
+
+.car {
+  width: 200px;
+  margin-right: 10px;
+  overflow: hidden;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.car img {
+  width: 100%;
+  height: auto;
+}
+
+.car-description {
+  display: none;
+}  */
+
+body {
+  background-color: #f8f9fa;
+}
+
+header {
+  background-color: #343a40;
+  padding: 20px;
+  color: #ffffff;
+  text-align: center;
+}
+
+main {
+  padding: 20px;
+}
+
+#menuButton {
+  display: none;
+}
+
+label[for="menuButton"] {
+  display: block;
+  background-color: #343a40;
+  color: #ffffff;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+#menu {
+  display: none;
+}
+
+#menu ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#menu ul li {
+  margin-bottom: 10px;
+}
+
+#search {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  box-sizing: border-box;
+}
+
+.car-gallery {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.car {
+  flex: 1;
+  margin: 10px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.car img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+.car:hover img {
+  transform: scale(1.1);
+}
+
+.car-description {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #ffffff;
+  padding: 10px;
+  text-align: center;
+  visibility: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
