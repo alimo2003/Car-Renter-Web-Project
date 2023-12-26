@@ -1,0 +1,28 @@
+.search-container {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  width: 40%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px;
+  border: none;
+  background-color: #333;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #555;
+}
