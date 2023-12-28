@@ -104,7 +104,7 @@ li a:hover {
   background-color: #555;
 }
 
-.car-details {
+.car .details {
   display: none;
   position: absolute;
   top: 0;
@@ -113,10 +113,14 @@ li a:hover {
   margin-left: 10px;
   /* Add some space between the car and details */
   background-color: #fff;
-  padding: 10px;
+  padding: 0px;
   margin-top: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   z-index: 1;
+}
+
+#details{
+    margin: auto;
 }
 
 #reservationStatus {

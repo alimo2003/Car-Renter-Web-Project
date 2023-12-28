@@ -61,7 +61,7 @@
             $d="details".$counter;
             echo "<div class='car' id='car1'>
                <img src='{$row['CarLink']}' width='200' height='135' alt={$row['CarName']}>
-              <div>
+              <div id='details'>
               <h2>{$row['CarName']}</h2>
               <p>Price per day: {$row['CarPrice']}$</p>
               <button onclick=\"showDetails('{$d}')\">Show Details</button>

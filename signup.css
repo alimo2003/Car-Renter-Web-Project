@@ -71,7 +71,9 @@ form{
     background-color: rgb(255, 255, 255);
 
  }
-
+#phperror{
+    color: red;
+}
 #phonenumber{
     width: 65%;
 }

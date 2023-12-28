@@ -64,6 +64,7 @@ function validateemail(){
 
 function validatpassword(){
     var passwordd=document.getElementById("password").value
+    
     if (/^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/.test(passwordd)) {
         document.getElementById("password").style.border="2px solid red"
         document.getElementById("submitbtn").disabled=true;
@@ -98,7 +99,7 @@ function validatephone(){
     if(phone===11){
         document.getElementById("phonenumber").style.border="2px solid green"
         document.getElementById("submitbtn").disabled=false;
-        document.getElementById("phoneerror").innerHTML="";
+        document.getElementById("phonexerror").innerHTML="";
     }
     else{
         document.getElementById("phonenumber").style.border="2px solid red"
