@@ -1,0 +1,47 @@
+// view current cars
+// function viewCurrentCars() {
+//   const currentCarsList = document.getElementById("currentCarsList");
+//   currentCarsList.innerHTML = "";
+
+//   if (carsData.length == 0) {
+//     currentCarsList.innerHTML = "<p>No cars available.</p>";
+//   } else {
+//     const ul = document.createElement("ul");
+//     carsData.forEach((car) => {
+//       const li = document.createElement("li");
+//       li.textContent = `${car.name} - ${car.model} (${car.year})`;
+//       ul.appendChild(li);
+//     });
+//     currentCarsList.appendChild(ul);
+//   }
+// }
+
+// Function to add a new car
+function addCar() {
+  const carName = document.getElementById("carName").value;
+  const carModel = document.getElementById("carModel").value;
+  const carYear = document.getElementById("carYear").value;
+  const carRent = document.getElementById("carRent").value;
+  const Color = document.getElementById("Color").value;
+
+  // Validation - Ensure all fields are filled
+  if (!carName || !carModel || !carYear || !carRent || !Color) {
+    alert("Please fill in all fields.");
+    return;
+  }
+
+  const newCar = {
+    name: carName,
+    model: carModel,
+    year: carYear,
+    rent: carRent,
+    Color: Color,
+  };
+
+  carsData.push(newCar);
+
+  // Clear form fields after adding a car
+  document.getElementById("addCarForm").reset();
+}
+//   viewCurrentCars();
+// }
