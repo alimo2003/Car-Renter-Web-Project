@@ -1,5 +1,3 @@
-
-
 function togglepassword(){
     event.preventDefault();
     var password = document.getElementById('password'); 
@@ -11,8 +9,7 @@ function togglepassword(){
     }
     else{
         btnlabel.innerHTML="Show"
-    }
-    
+    }   
 }
 
 function validatefname(){
@@ -23,7 +20,6 @@ function validatefname(){
         document.getElementById("fnameerror").innerHTML="First name contains numbers";
         document.getElementById("fnameerror").style.color="red";
         document.getElementById("fnameerror").style.fontSize="medium";
-
     }else {
         document.getElementById("fname").style.border="2px solid green"
         document.getElementById("submitbtn").disabled=false;
@@ -64,7 +60,6 @@ function validateemail(){
 
 function validatpassword(){
     var passwordd=document.getElementById("password").value
-    
     if (/^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/.test(passwordd)) {
         document.getElementById("password").style.border="2px solid red"
         document.getElementById("submitbtn").disabled=true;

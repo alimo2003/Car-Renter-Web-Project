@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,18 +10,15 @@
 </head>
 
 <body>
-
   <header>
-    <h1><a href="index2.html">Car Rental</a></h1>
+    <h1><a href="MainPage.php">Car Rental</a></h1>
   </header>
-
   <ul>
     <li><a class="active" href="#home">Home</a></li>
     <li><a href="profile.html">Profile</a></li>
     <li><a href="contact.html">Contact us</a></li>
     <li><a href="About.html">About</a></li>
   </ul>
-
   <div class="container">
     <form action="#" method="get">
       <label for="search">Search for Cars:</label>
@@ -39,38 +35,31 @@
     <div id="searchResults"></div>
   </section> -->
 
-    <section>
-      <?php
-      $conn = mysqli_connect("localhost", "root", "2003199", "backend");
+  <section>
+    <?php
+    include 'MyConnection.php';
 
-  
-      // Check connection
-      if ($conn->connect_error) {
-          die("Connection failed: " . $conn->connect_error);
-      }
-  
-      // Fetch data from the database
       $sql = "SELECT * FROM `cars`";
       $result = $conn->query($sql);
-      $counter=8;
-      // Display data in the div
+      $counter=0;
       if ($result) {
           while ($row = $result->fetch_assoc()) {
             if($row['CarAvailability']==1){
             $counter++;
             $d="details".$counter;
-            echo "<div class='car' id='car1'>
-               <img src='{$row['CarLink']}' width='200' height='135' alt={$row['CarName']}>
-              <div id='details'>
+            echo 
+            "<div class='car' id='car1'>
+              <img src='{$row['CarLink']}' width='200' height='135' alt={$row['CarName']}>
+            <div id='details'>
               <h2>{$row['CarName']}</h2>
               <p>Price per day: {$row['CarPrice']}$</p>
               <button onclick=\"showDetails('{$d}')\">Show Details</button>
-              </div>
-              <div id='{$d}' class='car-details'>
+            </div>
+            <div id='{$d}' class='car-details'>
               <h2>Details:</h2>
               <p>Model: {$row['CarModel']}<br>Color: {$row['CarColor']}</p>
             </div>
-            <button onclick=\"reserveCar('{$row['CarName']}')\"><a href='checkout.html'>Reserve</a></button>
+              <button onclick=\"reserveCar('{$row['CarName']}')\"><a href='checkout.html'>Reserve</a></button>
             </div>";
           }
         }

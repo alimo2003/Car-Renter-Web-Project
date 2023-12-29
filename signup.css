@@ -20,7 +20,6 @@ body{
     border: 0vw;
     align-items: center;
     height: 80%;
-
 }
 #den h2{
     margin-top: 0%;
@@ -69,7 +68,6 @@ form{
     border-radius: 1%; 
     border: none;
     background-color: rgb(255, 255, 255);
-
  }
 #phperror{
     color: red;
