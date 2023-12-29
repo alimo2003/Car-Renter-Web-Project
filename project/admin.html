@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Car Rental Admin Page</title>
+  <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Car Rental Admin Page</h1>
+
+    <!-- Option 1: View Current Cars -->
+    <section>
+      <h2>View Current Cars</h2>
+      <button onclick="viewCurrentCars()"><a href="viewcars.html">View Cars</a></button>
+      <div id="currentCarsList"></div>
+    </section>
+
+    <!-- Option 2: Add a Car Form -->
+    <section>
+      <h2>Add a Car</h2>
+      <form id="addCarForm">
+        <label for="carName">Car Name:</label>
+        <input type="text" id="carName" required>
+
+        <label for="carModel">Car Model:</label>
+        <input type="text" id="carModel" required>
+
+        <label for="carYear">Car Year:</label>
+        <input type="number" id="carYear" required>
+
+        <label for="carRent">Daily rent:</label>
+        <input type="number" id="carRent" required>
+
+        <label for="Color">Color:</label>
+        <input type="text" id="Color" required>
+
+
+        <button type="button" onclick="addCar()">Add Car</button>
+      </form>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
