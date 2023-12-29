@@ -1,6 +1,6 @@
-h1 {
-  color: white;
-  background-color: #333;
+
+button #back{
+  background-color: aquamarine;
 }
 
 body {
@@ -10,7 +10,6 @@ body {
   box-sizing: border-box;
   background: linear-gradient(135deg, #ffd700, #ff6347);
 }
-
 /* body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
@@ -19,17 +18,10 @@ body {
   color: #ffffff;
 } */
 
-header {
-  background-color: #333;
-  color: white;
-  /* padding: 20px; */
-  text-align: left;
-}
-
 main {
   display: flex;
   flex-wrap: wrap;
-  padding: 20px;
+  padding: 0vw;
 }
 
 ul {
@@ -75,8 +67,10 @@ li a:hover {
   background-color: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
+  width: 80vw;
   margin: 20px;
   padding: 20px;
+  margin-left: 5vw;
   transition: transform 0.3s ease-in-out;
 }
 

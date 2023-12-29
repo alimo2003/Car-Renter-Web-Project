@@ -16,15 +16,15 @@
     <header><h1><a href="MainPage.php" id="navhomepage">Car Renter</a></h1></header>
     <div id="den">
          <div id="Logindiv">
-             <h2>Login</h2>
-                <form action="LoginSS.php" method="post" id="loginform">
+            <h2>Login</h2>
+            <form action="LoginSS.php" method="post" id="loginform">
                 <input type="text" placeholder="Phone Number" id="email" required name="phonenumber"><br>
                 <span id="passworderror"></span><br>
                 <input type="password" placeholder="Password" id="password" name="password"required><br>
                 <span id="passworderror"></span><br>
-               <button id="submitbtn">Login</button><br><br>
+                <button id="submitbtn">Login</button><br><br>
                 <a href="signup.html" id="chn">Don't have account? sign up from here</a>
-                </form>
+            </form>
         </div>
     </div> 
 </body>
