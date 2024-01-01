@@ -1,46 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Car Rental Profile</title>
-  <link href="profile.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        .navigation-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin: 10px;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #2317ce; /* Change the background color */
+            color: rgb(240, 235, 235);
+            border: none;
+            cursor: pointer;
+        }
+    </style>
 </head>
-
 <body>
-  <header>
-    <h1>Car Rental</h1>
-  </header>
+    <div class="container">
+        <div class="left_Side">
+            <div class="profileText">
+                <div class="imgBx">
+                    <img src="Screenshot (38).png" alt="Example Image">
+                </div>
+                <h2>profile photo<br><span></span></h2>
+            </div>
+            <div class="contactInfo">
+                <h3 class="title">My Info</h3>
+                <ul>
+                    <li>
+                        <span class="icon"><i class="fa fa-user" aria-hidden="true"></i></span>
+                        <span class="text"> Name: Tom</span>
+                    </li>
+                    <li>
+                        <span class="icon"><i class="fa fa-birthday-cake" aria-hidden="true"></i></span>
+                        <span class="text"> Age: 30</span>
+                    </li>
+                    <li>
+                        <span class="icon"><i class="fa fa-phone" aria-hidden="true"></i></span>
+                        <span class="text">0126543278</span>
+                    </li>
+                    <li>
+                        <span class="icon"><i class="fa fa-envelope-o" aria-hidden="true"></i> </span>
+                        <span class="text">email@example.com</span>
+                    </li>
+                    <li>
+                        <span class="icon"><i class="fa fa-linkedin-square" aria-hidden="true"></i></span>
+                        <span class="text">Linkedin: linkedin.com/in/johndoe</span>
+                    </li>
+                    <li>
+                        <span class="icon"><i class="fa fa-map-pin" aria-hidden="true"></i></span>
+                        <span class="text">6 October, Giza</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="navigation-buttons" id="navigationButtons">
+        <button id="previousButton" onclick="goToPreviousPage()">Previous Page</button>
+        <button id="nextButton" onclick="goToNextPage()">Next Page</button>
+        <button id="logoutButton" onclick="logout()">Logout</button>
+    </div>
+    </div>
+    <script src="script.js"></script>
+    <script>
+        // Add this script to set the button styles
+        document.addEventListener('DOMContentLoaded', function () {
+            const previousButton = document.getElementById('previousButton');
+            const nextButton = document.getElementById('nextButton');
+            
 
-  <button class="back-btn" onclick="goBack()">Back</button>
 
-  <div class="container">
-    <h2>My Profile</h2>
-    <form id="profileForm">
-      <label for="fullName">Full Name:</label>
-      <input type="text" id="fullName" name="fullName" required>
+            // Set button styles
+            previousButton.style.backgroundColor = '#e61717'; // Set the background color
+            nextButton.style.backgroundColor = '#2ecc71'; // Set the background color
+            
+        });
 
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
+        function goToPreviousPage() {
+            // Implement logic to navigate to the previous page
+            console.log('Navigating to the previous page');
+        }
 
-      <label for="phone">Phone:</label>
-      <input type="tel" id="phone" name="phone" required>
+        function goToNextPage() {
+            // Implement logic to navigate to the next page
+            console.log('Navigating to the next page');
+        }
 
-      <label for="address">Address:</label>
-      <input type="text" id="address" name="address">
-
-      <button type="submit">Update Profile</button>
-    </form>
-
-
-  </div>
-
-  <script>
-    function goBack() {
-      window.history.back();
-    }
-  </script>
+        function logout() {
+            // Implement logout logic here
+            console.log('Logging out');
+    </script>
 </body>
-
 </html>
