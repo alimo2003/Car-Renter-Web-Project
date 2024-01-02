@@ -1,6 +1,6 @@
 <?php
 // Create connection
-$conn = new mysqli($"localhost", "root", "2003199", "backend");
+$conn = new mysqli("localhost", "root", "2003199", "backend");
 
 // Check connection
 if ($conn->connect_error) {

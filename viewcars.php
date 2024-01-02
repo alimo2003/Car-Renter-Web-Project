@@ -11,6 +11,8 @@
   <body>
     <button id="back"><a href="addcar.php">Add Car</a></button>
     <button id="back"><a href="deletecarp.php">Remove Car</a></button>
+    <button id="back"><a href="Logout.php">Logout</a></button>
+
 
     <section>
     <?php

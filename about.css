@@ -1,24 +1,26 @@
-h1 {
-  color: white;
+#main2:link, #main2:visited, #main2:hover, #main2:active{
+  text-decoration: none;
+  font-family:'Rubik', sans-serif, Courier, monospace;
+  color: gold;
 }
 
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
-  background: linear-gradient(135deg, #ffd700, #ff6347);
+  background: rgb(14, 14, 14);;
   color: #ffffff;
 }
 
-header {
-  background-color: #333;
-  color: white;
-  padding: 20px;
-  text-align: center;
+header {   
+  background-color: black;
+  padding: 1vw;
+  margin: 0%;
+  border: 0vw;
 }
 
 nav {
-  background-color: #343a40;
+  background-color: black;
   padding: 10px;
   text-align: center;
 }
@@ -38,10 +40,11 @@ nav a:hover {
 section {
   max-width: 800px;
   margin: 20px auto;
-  background: linear-gradient(180deg, #ffffff, #f8f9fa);
+  background-color:   rgb(180, 180, 180);
   padding: 30px;
   border-radius: 8px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  color: black;
 }
 
 h2 {

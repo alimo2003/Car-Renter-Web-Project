@@ -1,5 +1,6 @@
+/* Add your custom styles here */
 h1 {
-  color: white;
+  color: gold;
 }
 
 body {
@@ -7,22 +8,23 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background: linear-gradient(135deg, #ffd700, #ff6347);
+  background: rgb(14, 14, 14);
 }
 
-/* body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  margin: 0;
-  padding: 0;
-  background: linear-gradient(135deg, #FFD700, #FF6347);
-  color: #ffffff;
-} */
+#main2:link,
+#main2:visited,
+#main2:hover,
+#main2:active {
+  text-decoration: none;
+  font-family: 'Rubik', sans-serif, Courier, monospace;
+  color: gold;
+}
 
 header {
-  background-color: #333;
-  color: white;
-  padding: 20px;
-  text-align: center;
+  background-color: black;
+  padding: 1vw;
+  margin: 0%;
+  border: 0vw;
 }
 
 main {
@@ -31,11 +33,23 @@ main {
   padding: 20px;
 }
 
+#searchterm {
+  margin-top: 5vw;
+  border-radius: 9%;
+  width: 25%;
+  height: 3vw;
+}
+
+#searchbtn:hover {
+  background-color: gold;
+  color: black;
+}
+
 ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
-  background-color: #333;
+  background-color: black;
   overflow: hidden;
 }
 
@@ -52,7 +66,7 @@ li a {
 }
 
 li a:hover {
-  background-color: #555;
+  background-color: gold;
 }
 
 .col-md-3 {
@@ -71,12 +85,13 @@ li a:hover {
   align-items: center;
   justify-content: space-between;
   position: relative;
-  background-color: #fff;
+  background-color: rgb(31, 31, 31);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   margin: 20px;
   padding: 20px;
   transition: transform 0.3s ease-in-out;
+  color: white;
 }
 
 .car:hover {
@@ -89,7 +104,7 @@ li a:hover {
   border-radius: 8px;
 }
 
-.car button {
+button {
   background-color: #555;
   color: white;
   padding: 10px 15px;
@@ -101,7 +116,8 @@ li a:hover {
 }
 
 .car button:hover {
-  background-color: #555;
+  background-color: gold;
+  color: black;
 }
 
 .car .details {
@@ -116,13 +132,18 @@ li a:hover {
   padding: 0px;
   margin-top: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  z-index: 1;
 }
 
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  #searchterm {
+    width: 100%;
+    margin-top: 10px;
+  }
 
-#reservationStatus {
-  margin-top: 20px;
-  padding: 10px;
-  background-color: #eee;
-  border-radius: 4px;
+  .col-md-3,
+  .col-md-9 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
 }

@@ -1,15 +1,28 @@
-const xhr=new XMLHttpRequest();
-function check(){
-    xhr.onreadystatechange=function(){
-        if(xhr.status==200 && xhr.readyState==4){
-            if(document.getElementById("T").value===this.responseText){
-                document.getElementById("TA").innerHTML="Available"
+document.addEventListener('DOMContentLoaded', function () {
+    const loginForm = document.getElementById('loginform');
+    const passwordError = document.getElementById('passworderror');
 
-            }else{
-                document.getElementById("TA").innerHTML="Not Available"
+    loginForm.addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        const formData = new FormData(loginForm);
+
+        fetch('LoginSS.php', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                // Redirect to the appropriate page based on the server response
+                window.location.href = data.redirect;
+            } else {
+                passwordError.textContent = data.message;
+                passwordError.style.color = 'red'; // Set the color to red
             }
-        }
-    }
-    xhr.open("POST", "mydata.txt", true);
-    xhr.send();
-}
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+    });
+});

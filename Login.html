@@ -9,21 +9,21 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
-    <title>Sign Up</title>
+    <title>Login</title>
+    <script src="Login.js"></script>
 </head>
 <body>
-    <header><h1><a href="#" id="navhomepage">Car Renter</a></h1></header>
+    <header><h1><a href="index.html" id="navhomepage">Car Renter</a></h1></header>
     <div id="den">
          <div id="Logindiv">
-             <h2>Login</h2>
-                <form action="Login.php" method="post" id="loginform">
-                <input type="email" placeholder="Email" id="email" required name="email"><br>
-                <span id="passworderror"></span><br>
-                <input type="text" placeholder="Password" id="password" name="password"required><br>
+            <h2>Login</h2>
+            <form action="LoginSS.php" method="post" id="loginform">
+                <input type="text" placeholder="Phone Number" id="email" required name="phonenumber"><br>
+                <input type="password" placeholder="Password" id="password" name="password"required><br>
                 <span id="passworderror"></span><br>
                 <button id="submitbtn">Login</button><br><br>
                 <a href="signup.html" id="chn">Don't have account? sign up from here</a>
-                </form>
+            </form>
         </div>
     </div> 
 </body>

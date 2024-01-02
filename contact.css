@@ -1,25 +1,35 @@
+#navhomepage {
+  background-color: transparent;
+  font-family: 'Rubik', sans-serif, Courier, monospace;
+  border: none;
+  color: gold;
+  font-size: larger;
+  cursor: pointer;
+}
+
+header {
+  background-color: black;
+  padding: 1vw;
+  margin: 0%;
+  border: 0vw;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background: linear-gradient(135deg, #ffd700, #ff6347);
-}
-
-header {
-  background-color: #333;
-  color: white;
-  padding: 20px;
-  text-align: center;
+  background-color: rgb(14, 14, 14);
 }
 
 section {
-  max-width: 600px;
+  max-width: 80%; /* Adjusted max-width for better responsiveness */
   margin: 20px auto;
-  background-color: #fff;
+  background-color: rgb(180, 180, 180);
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  color: black;
 }
 
 p {
@@ -56,4 +66,85 @@ a:hover {
 
 .back-btn:hover {
   background-color: #545b62;
+}
+
+@media only screen and (max-width: 600px) {
+  section {
+    max-width: 100%;
+  }
+}
+#navhomepage {
+  background-color: transparent;
+  font-family: 'Rubik', sans-serif, Courier, monospace;
+  border: none;
+  color: gold;
+  font-size: larger;
+  cursor: pointer;
+}
+
+header {
+  background-color: black;
+  padding: 1vw;
+  margin: 0%;
+  border: 0vw;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: rgb(14, 14, 14);
+}
+
+section {
+  max-width: 80%; /* Adjusted max-width for better responsiveness */
+  margin: 20px auto;
+  background-color: rgb(180, 180, 180);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  color: black;
+}
+
+p {
+  margin-bottom: 16px;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  color: #555;
+}
+
+.button {
+  background-color: #555;
+  color: #ffffff;
+  padding: 20px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.button:hover {
+  background-color: #23272b;
+}
+
+.back-btn {
+  background-color: #555;
+}
+
+.back-btn:hover {
+  background-color: #545b62;
+}
+
+@media only screen and (max-width: 600px) {
+  section {
+    max-width: 100%;
+  }
 }

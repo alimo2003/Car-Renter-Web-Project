@@ -43,14 +43,14 @@
             }
         }
         }
-
-        $sql = "INSERT INTO cars VALUES ('$carlink', '$carname', '$dailyrent', TRUE, '$carmodel', '$color', 'NONE')";
+        $sql = "INSERT INTO `cars`(`CarLink`, `CarName`, `CarPrice`, `CarAvailability`, `CarModel`, `CarColor`, `Rented by`, `Rented Until`, `Rented From`, `RentedPrice`)
+         VALUES ('$carlink', '$carname', '$dailyrent', TRUE, '$carmodel', '$color', 'NONE',null,null,null)";
 
         if (mysqli_query($conn, $sql)) {
             echo "<span id='phperror' style='color:green;'>Added Successfully!</span><br><br>";
 
         } else {
-            echo "<span id='phperror' style='color:red;'>Something Went Wrong</span><br><br>";
+            echo "<span id='phperror' style='color:red;'> Error" . mysqli_error($conn) ."</span><br><br>";
         }
             mysqli_close($conn);
         ?>

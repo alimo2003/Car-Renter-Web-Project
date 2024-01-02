@@ -1,72 +1,93 @@
 #navhomepage:link, #navhomepage:visited, #navhomepage:hover, #navhomepage:active { 
-    color: rgb(8, 166, 31);
+    color: gold;
     text-decoration: none;
-    font-family:'Rubik', sans-serif, Courier, monospace;
+    font-family: 'Rubik', sans-serif, Courier, monospace;
 }
-header{
-    background-color: rgb(220, 220, 220);
+
+header {
+    background-color: black;
     padding: 1vw;
     margin: 0%;
     border: 0vw;
 }
-body{
-    background-color:   rgb(220, 255, 212);
+
+body {
+    background-color: rgb(14, 14, 14);
     margin: 0%;
     font-size: large;
 }
-form{
+
+form {
     align-items: center;
     margin: auto;
     text-align: center;
 }
-#rememberme{
+
+#rememberme {
     width: 3vw;
-    margin:0vw;
+    margin: 0vw;
     width: 1vw;
     height: 20px;
     margin-left: -60%;
     margin-right: 1%;
     margin-bottom: -10%;
 }
+
 input {
     width: 90%;
     border-radius: 7%;
     height: 2vw;
     margin: 0.5vw;
 }
-#Logindiv{
-    background-color:   rgb(255, 255, 255);
+
+#Logindiv {
+    background-color: rgb(180, 180, 180);
     width: 30vw;
+    max-width: 80%; /* Added max-width for larger screens */
     align-items: center;
     margin: auto;
     margin-top: 5%;
-    padding: 2vw;   
-    padding-bottom:1vw ;
+    padding: 2vw;
+    padding-bottom: 1vw;
     border-radius: 5%;
-    border:1px solid black;
+    border: 1px solid black;
 }
-#den{
-    background-color:   rgb(225, 255, 212);
+
+#den {
+    background-color: rgb(14, 14, 14);
     margin-top: 0%;
     border: 0vw;
     align-items: center;
     height: 80%;
 }
-#den h2{
+
+#den h2 {
     margin-top: 0%;
     text-align: center;
 }
-button{
+
+button {
     margin-top: 1vw;
     width: 25%;
     height: 2vw;
     border-radius: 0.5vw;
 }
-button:hover{
-    background-color:#002ead;
+
+button:hover {
+    background-color: gold;
     transition: 0.7s;
 }
-#chn:link, #chn:visited, #chn:hover, #chn:active{
+
+#chn:link, #chn:visited, #chn:hover, #chn:active {
     text-decoration: none;
-    font-family:'Rubik', sans-serif, Courier, monospace;
+    font-family: 'Rubik', sans-serif, Courier, monospace;
+    color: black;
+}
+
+/* Media queries for responsiveness */
+@media only screen and (max-width: 600px) {
+    #Logindiv {
+        width: 90%;
+        max-width: none;
+    }
 }

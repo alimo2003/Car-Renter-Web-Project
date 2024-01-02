@@ -1,3 +1,7 @@
+<?php 
+  session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,39 +10,32 @@
   <title>Car Rental</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="Mainpage.css">
-  <link rel="stylesheet" href="searchbar.css">
 </head>
 
 <body>
   <header>
-    <h1><a href="MainPage.php">Car Rental</a></h1>
+    <h1><a href="MainPage.php" id="main2">Car Rental</a></h1>
+    <ul>
+      <li><a class="active" href="#home">Home</a></li>
+      <li><a href="profile.php">Profile</a></li>
+      <li><a href="contact.html">Contact us</a></li>
+      <li><a href="About.html">About</a></li>
+      <li><a href="Logout.php">Logout</a></li>
+    </ul>
   </header>
-  <ul>
-    <li><a class="active" href="#home">Home</a></li>
-    <li><a href="profile.html">Profile</a></li>
-    <li><a href="contact.html">Contact us</a></li>
-    <li><a href="About.html">About</a></li>
-  </ul>
-  <div class="container">
-    <form action="#" method="get">
-      <label for="search">Search for Cars:</label>
-      <input type="text" id="search" name="search" placeholder="Enter location, car type, etc.">
-      <input type="submit" value="Search">
-    </form>
 
-    <!-- <section>
-    <div class="search-container">
-      <input type="text" id="searchInput" placeholder="Search for a car...">
-      <button onclick="searchCars()">Search</button>
+  
+  <div class="container">   
+     <div id="search-container">
+        <form id="searchform" action="searchres.php" method="post">
+            <input type="text" id="searchterm" name="searchterm" required placeholder="Search by Car Name">
+            <button type="submit" id="searchbtn">Search</button>
+        </form>
     </div>
-
-    <div id="searchResults"></div>
-  </section> -->
 
   <section>
     <?php
     include 'MyConnection.php';
-
       $sql = "SELECT * FROM `cars`";
       $result = $conn->query($sql);
       $counter=0;
@@ -59,7 +56,7 @@
               <h2>Details:</h2>
               <p>Model: {$row['CarModel']}<br>Color: {$row['CarColor']}</p>
             </div>
-              <button onclick=\"reserveCar('{$row['CarName']}')\"><a href='checkout.html'>Reserve</a></button>
+              <button onclick=\"reserveCar('{$row['CarName']}','{$row['CarColor']}','{$row['CarModel']}',{$row['CarPrice']},'{$row['CarID']}')\">Reserve</button>
             </div>";
           }
         }
@@ -72,35 +69,25 @@
       ?>
       
     </section>
-
-    <div id="reservationStatus"></div>
   </div>
 
   <script>
-    function showElement() {
-      var menu = document.getElementById('menu');
-      if (menu.style.display === "block") {
-        menu.style.display = "none";
-      } else {
-        menu.style.display = "block";
-      }
-    }
     function showDetails(elementId) {
       var element = document.getElementById(elementId);
-      element.style.display = (element.style.display === "none") ? "block" : "none";
+        element.style.display = (element.style.display === "none") ? "block" : "none";
     }
 
-    function reserveCar(carName) {
-      // Add reservation logic here
-      document.getElementById('reservationStatus').innerText = 'Car reserved: ' + carName;
+    function reserveCar(carName, carColor, carModel,carPrice,carid) {
+    // Encode the details to handle special characters
+    const encodedCarName = encodeURIComponent(carName);
+    const encodedCarColor = encodeURIComponent(carColor);
+    const encodedCarModel = encodeURIComponent(carModel);
+    const encodedCarPrice = encodeURIComponent(carPrice);
+    const encodedCarid = encodeURIComponent(carid);
+    
+    // Redirect to the checkout.html page with the details as parameters
+    window.location.href = `checkout.php?carName=${encodedCarName}&carColor=${encodedCarColor}&carModel=${encodedCarModel}&carPrice=${encodedCarPrice}&carid=${encodedCarid}`;
     }
-
-    // function searchCars() {
-    //
-    //   var searchInput = document.getElementById("searchInput").value;
-    //   var searchResults = document.getElementById("searchResults");
-    //   searchResults.innerHTML = `<p>Showing results for: ${searchInput}</p>`;
-    // }
 
   </script>
 </body>
